@@ -1,7 +1,6 @@
 package global
 
 import (
-	"embed"
 	"github.com/go-redis/redis/v8"
 	"github.com/go-resty/resty/v2"
 	"gitlab.landui.cn/gomod/database"
@@ -17,12 +16,8 @@ var (
 	RedisClient *redis.Client     // 高速缓存
 	WebPort     = ""              // web服务端口
 	HttpClient  *resty.Client     // http服务
-	Prepay      = "JMY13PagXnhl3rpiI1ht1hBBOaSF7dSOf8ktJ95zmOx19PWayRlyCtCm7UT0mghJ"
-	Logger      *zap.Logger               // 日志收集器
-	LoggerLevel int8                      // 日志等级
-	LogPath     string                    // 日志文件存放路径
-	ConfigPath  string                    // 配置文件路径
-	Shell       embed.FS                  // 远程链接
-	ApiUrl      = make(map[string]string) //外部依赖的API列表
-	ContextName string                    // 上下文名称
+	Logger      *zap.Logger       // 日志收集器
+	LoggerLevel int8              // 日志等级
+	LogPath     string            // 日志文件存放路径
+	ContextName string            // 上下文名称
 )
