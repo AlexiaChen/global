@@ -1,9 +1,9 @@
 package global
 
 import (
+	"github.com/AlexiaChen/database"
 	"github.com/go-redis/redis/v8"
 	"github.com/go-resty/resty/v2"
-	"gitlab.landui.cn/gomod/database"
 	"go.uber.org/zap"
 )
 
