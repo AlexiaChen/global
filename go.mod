@@ -1,4 +1,4 @@
-module gitlab.landui.cn/gomod/global
+module github.com/AlexiaChen/global
 
 go 1.20
 
