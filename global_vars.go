@@ -1,6 +1,7 @@
 package global
 
 import (
+	ut "github.com/go-playground/universal-translator"
 	"github.com/go-redis/redis/v8"
 	"github.com/go-resty/resty/v2"
 	"gitlab.landui.cn/gomod/database"
@@ -20,4 +21,6 @@ var (
 	LoggerLevel int8              // 日志等级
 	LogPath     string            // 日志文件存放路径
 	ContextName string            // 上下文名称
+	Validate    *validator.Validate
+	Trans       ut.Translator
 )
