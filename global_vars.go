@@ -2,6 +2,7 @@ package global
 
 import (
 	ut "github.com/go-playground/universal-translator"
+	"github.com/go-playground/validator/v10"
 	"github.com/go-redis/redis/v8"
 	"github.com/go-resty/resty/v2"
 	"gitlab.landui.cn/gomod/database"
@@ -9,7 +10,6 @@ import (
 )
 
 func init() {
-
 }
 
 var (
