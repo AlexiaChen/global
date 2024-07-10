@@ -17,7 +17,9 @@ func InitInjector() {
 func ProvideService[T any](service do.Provider[T]) error {
 	if injector != nil {
 		do.Provide(injector, service)
-		return nil
+		// guarantee the service is available and not lazyly loaded
+		_, err := do.Invoke[T](injector)
+		return err
 	}
 	return fmt.Errorf("do not forget invoke InitInjector before doing this")
 }
